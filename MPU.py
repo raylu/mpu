@@ -149,7 +149,8 @@ def help(userFrom, command):
 		return True
 
 def source():
-	return say("You can view my source at http://github.com/raylu/mpu/, the fork at http://github.com/vermi/mpu, or the original at http://github.com/xiongchiamiov/mpu/")
+	server.privmsg(userFrom, "You can view my source at http://github.com/raylu/mpu/, the fork at http://github.com/vermi/mpu, or the original at http://github.com/xiongchiamiov/mpu/")
+	return True
 
 def report(userFrom, message):
 	global users
