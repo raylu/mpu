@@ -148,7 +148,7 @@ def help(userFrom, command):
 		server.privmsg(userFrom, "Type 'help [command]' to get more info about command. I also respond to PMs; just remember you don't need ! in front of the command.")
 		return True
 
-def source():
+def source(userFrom):
 	server.privmsg(userFrom, "You can view my source at http://github.com/raylu/mpu/, the fork at http://github.com/vermi/mpu, or the original at http://github.com/xiongchiamiov/mpu/")
 	return True
 
@@ -706,7 +706,7 @@ def roll(userFrom, command):
 ## Handle Input
 handleFlags = {
 	'help':      lambda userFrom, command: help(userFrom, command),
-	'source':    lambda userFrom, command: source(),
+	'source':    lambda userFrom, command: source(userFrom),
 	'report':    lambda userFrom, command: report(userFrom, command),
 	'kill':      lambda userFrom, command: kill(userFrom),
 	'gag':       lambda userFrom, command: gag(),
