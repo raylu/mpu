@@ -519,7 +519,7 @@ def say_response(tr):
 	if 'responseData' in tr:
 		say_response(tr['responseData'])
 	elif 'translatedText' in tr:
-		tr_text = tr['translatedText'].encode('utf-8')
+		tr_text = decode_htmlentities(tr['translatedText']).encode('utf-8')
 		say(tr_text)
 	else:
 		for r in tr:
